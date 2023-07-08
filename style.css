@@ -8,3 +8,9 @@ body{
     height: 200px;
     border:2px solid lightblue;
 }
+div.subtext{
+    color: lightblue;
+    width: 50%;
+    height: 200px;
+
+}
