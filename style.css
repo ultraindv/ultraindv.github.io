@@ -1,13 +1,1 @@
-body{
-    background-color: white;
-    font-family: sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 200px;
-    border:2px solid lightblue;
-}
-div.subtext{
-    color: lightblue;
-}
+
