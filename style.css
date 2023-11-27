@@ -1,11 +1,14 @@
-h1{
+head{
+    font-family: sans-serif;
     text-align: center;
 }
 body{
+    font-family: sans-serif;
     text-align: center;
     background-color: lightblue;
 }
 footer{
+    font-family: sans-serif;
     text-align: center;
     background-color: gray;
 }
