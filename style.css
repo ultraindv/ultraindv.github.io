@@ -34,3 +34,13 @@ footer{
     text-align: center;
     background-color: gray;
 }
+li{
+    list-style: none;
+    display: inline-block;
+}
+li a{
+    color: aqua;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 25px;
+}
