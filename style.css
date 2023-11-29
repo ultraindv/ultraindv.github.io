@@ -12,7 +12,7 @@ footer{
     text-align: center;
     background-color: gray;
 }
-.button {
+div.buttons{
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
