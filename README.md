@@ -1,4 +1,2 @@
-# TahjaeDev website
-see the official [TahjaeDev Website in action](https://tahjaedev.github.io)
-# Extention
-The TahjaeDev extention is comming soon
+# Tahj-S website
+see the official [Tahj-S Website in action](https://tahj-s.github.io)
