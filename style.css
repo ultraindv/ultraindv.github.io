@@ -8,7 +8,7 @@ body {
 
 /* Header styling */
 nav {
-    background-color: #87CEEB;
+    background-color: #90EE90;
     color: #fff;
     padding: 14px 16px;
     text-align: center;
@@ -90,10 +90,6 @@ img {
 
 /* Article styling */
 .article-container {
-    background-image: url("images/Bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Keep the background fixed */
     height: 100vh;
     padding: 20px;
     color: #ffffff;
