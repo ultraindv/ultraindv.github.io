@@ -218,3 +218,6 @@ section p {
 .github {
     background-image: url("https://nosstos.github.io/images/social icons/github.png");
 }
+code {
+    color: #90ee90;
+}
