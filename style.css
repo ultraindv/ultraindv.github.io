@@ -231,3 +231,14 @@ section p {
 code {
     color: #90ee90;
 }
+
+@media (prefers-color-scheme: dark) {
+    html {
+        filter: invert(1) hue-rotate(180deg);
+    }
+    
+    /* Fix images, videos, and specific logos so they don't look like negatives */
+    img, video, .logo, .twitter, .github, .article-container::before {
+        filter: invert(1) hue-rotate(180deg);
+    }
+}
