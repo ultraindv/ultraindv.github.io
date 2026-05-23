@@ -236,7 +236,8 @@ code {
     html {
         filter: invert(1) hue-rotate(180deg);
     }
-    
+
+    menu-icon,
     img, 
     video, 
     nav, 
