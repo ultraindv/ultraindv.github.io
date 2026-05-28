@@ -244,8 +244,6 @@ code {
     .footer, 
     .sidebar,
     .logo, 
-    .twitter, 
-    .github, 
     .article-container::before {
         filter: invert(1) hue-rotate(180deg);
     }
