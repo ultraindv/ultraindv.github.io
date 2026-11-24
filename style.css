@@ -204,11 +204,11 @@ footer {
   .logo {
     filter: none;
   }
-  main a:not(.project-btn), section a:not(.project-btn) {
+  main a:not(.project-btn, .btn-action), section a:not(.project-btn, .btn-action) {
     color: #1a7f37;
   }
 
-  main a:not(.project-btn):hover, section a:not(.project-btn):hover {
+  main a:not(.project-btn, .btn-action):hover, section a:not(.project-btn, .btn-action):hover {
     color: #116329;
   }
   code {
