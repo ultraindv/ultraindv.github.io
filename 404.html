@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>404 | UltrainDV</title>
-    <link rel="shortcut icon" type="Favicon" href="images/Icon.png">
-    <h1>404</h1>
-    <p>Something happened on our end</p>
-    <div class="buttons">
-    <button onclick="location.href = 'index.html';" id="button">Back to Home</button>
-    </div>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | UltrainDV</title>
+    <link rel="icon" type="image/png" href="images/Icon.png">
+    <link rel="stylesheet" href="style.css">
     <style>
-head{
-    font-family: sans-serif;
-    text-align: center;
-}
-body{
-    font-family: sans-serif;
-    text-align: center;
-    background-color: #90EE90;
-}
-footer{
-    font-family: sans-serif;
-    text-align: center;
-    background-color: gray;
-}
-button.button{
-    background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-}
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100dvh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .error-code {
+            font-size: 5rem;
+            font-weight: 700;
+            color: #90EE90;
+            margin-bottom: 8px;
+        }
+
+        @media (prefers-color-scheme: light) {
+            .error-code {
+                color: #1a7f37;
+            }
+        }
     </style>
+</head>
+<body>
+    <h1 class="error-code">404</h1>
+    <p>Something happened on our end — or this page doesn't exist.</p>
+    <a href="https://ultraindv.github.io" class="project-btn">Back to Home</a>
+</body>
+</html>
