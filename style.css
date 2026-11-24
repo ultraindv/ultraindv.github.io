@@ -1,12 +1,9 @@
 /* General styling */
 
-.ubuntu-sans-<uniquifier> {
-  font-family: "Ubuntu Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
+.fira-sans-medium {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
 }
 
 body {
