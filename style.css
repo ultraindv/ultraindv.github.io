@@ -1,88 +1,32 @@
-/* General styling */
-
-.fira-sans-medium {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+:root {
+  --bs-body-font-family: "Fira Sans", sans-serif;
+  --bs-body-bg: #0d1117;
+  --bs-body-color: #f0f6fc;
+  --accent-green: #90EE90;
+  --card-bg: #161b22;
+  --border-color: #30363d;
 }
 
-body {
-    font-family: "Fira Sans", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    background-color: #f2f2f2;
-    color: #333;
-
-}
-
-/* Header styling */
-nav {
-    background-color: #90EE90;
-    color: #fff;
-    padding: 14px 16px;
-    text-align: center;
-}
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
+/* 2. Base Page Layout */
+html, body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  font-family: var(--bs-body-font-family);
 }
 
 .logo {
-        width: 40px; /* Adjust the logo size as needed */
-        height: 40px; /* Adjust the height as needed */
-        background-size: contain; /* Scale the image to fit the container */
-        background-repeat: no-repeat; /* Prevent repetition */
-        margin-right: 10px;
-        max-height: 40px; /* Adjust the height as needed */
-        max-width: 100%; /* Allow the width to adjust proportionally */
-}
-
-/* Section styling */
-.section {
-    padding: 40px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Button styling */
-.btn {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.btn:hover {
-    background-color: #0056b3;
-}
-
-/* Image styling */
-img {
+    width: 40px; 
+    height: 40px; 
+    background-size: contain;
+    background-repeat: no-repeat; 
+    margin-right: 10px;
+    max-height: 40px; 
     max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.sidebar {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    left: -250px; /* Hide the sidebar initially */
-    width: 250px;
-    height: 100%;
-    transition: left 0.3s ease;
-}
-
-.sidebar a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    margin-bottom: 10px;
+    filter: invert(1) hue-rotate(180deg);
 }
 
 .menu-icon {
@@ -93,118 +37,106 @@ img {
     cursor: pointer;
 }
 
-.show-sidebar {
-    left: 0;
+main, section {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 24px 20px;
 }
 
-/* Article styling */
-.article-container {
-    height: 100vh;
-    padding: 20px;
-    color: #ffffff;
-    text-align: center; /* Center text horizontally */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center text vertically */
-    background-color: rgba(0, 0, 0, 0.7); /* Darken the background */
-    position: relative;
-    -webkit-backface-visibility: hidden;
+main a:not(.project-btn), section a:not(.project-btn) {
+  color: #90EE90;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-.article-container::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("images/Bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    z-index: -1; /* Place it behind the content */
+main a:not(.project-btn):hover, section a:not(.project-btn):hover {
+  color: #b8f7b8;
 }
 
-.article-container h1 {
-    font-size: 24px;
-    font-weight: bold;
+/* 3. Navbar Styling */
+nav, .navbar {
+  background-color: var(--accent-green);
+  color: #111111;
+  padding: 12px 24px;
 }
 
-.article-container p {
-    font-size: 16px;
-    line-height: 1.5;
+nav a, .navbar a, .navbar-brand, .nav-link {
+  color: #111111 !important;
+  font-weight: 500;
+  text-decoration: none;
 }
 
-/* General styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
-    margin: auto;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+nav a:hover, .nav-link:hover {
+  text-decoration: underline;
 }
 
-/* Article section styling */
-section {
-    background-color: #ffffff;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* 4. Project Cards */
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.15s ease, border-color 0.15s ease;
 }
 
-section h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-green);
 }
 
-section p {
-    font-size: 16px;
-    line-height: 1.5;
+.card img, .project-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  background-color: #21262d;
 }
 
-/* Call-to-action button */
-.cta-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+/* 5. Buttons */
+main button, section button, .btn-primary, .project-btn {
+  background-color: #238636;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 6px;
+  transition: background-color 0.15s ease;
 }
 
-.cta-button:hover {
-    background-color: #0056b3;
+main button:hover, section button:hover, .btn-primary:hover, .project-btn:hover {
+  background-color: #2ea043;
+  border-color: #2ea043;
 }
 
+/* Code */
 
-.redirect-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
- }
-
-/* Footer styling */
-
-.footer {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    height: 100px; /* Adjust as needed */
-    margin-top: auto;
+code {
+  display: inline-block;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  color: #79c0ff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.95rem;
 }
 
+/* 6. Footer */
+footer {
+  background-color: var(--card-bg);
+  border-top: 1px solid var(--border-color);
+  color: #8b949e;
+  padding: 24px 16px;
+  text-align: center;
+  margin-top: auto;
+  background-color: #161b22;
+}
 
 /* Social Icons (all rights go to the original owners) */
 
@@ -212,12 +144,17 @@ section p {
     display: inline-block;
     width: 30px;
     height: 30px;
-    margin-right: 10px;
+    margin: 0 6px;
     background-repeat: no-repeat;
     background-size: contain;
-    border-radius: 5px; /* Rounded square corners */
-    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
-    font-size: 0; /* Hide any text content inside the link */
+    background-position: center;
+    font-size: 0;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
 }
 
 .twitter {
@@ -226,27 +163,45 @@ section p {
 
 .github {
     background-image: url("https://nosstos.github.io/images/social icons/github.png");
-}
-code {
-    color: #add836;
+    filter: invert(1);
 }
 
-@media (prefers-color-scheme: dark) {
-    html {
-        filter: invert(1) hue-rotate(180deg);
-    }
+/* 7. Mobile / Portrait Aspect Ratio Adjustments */
+@media (max-aspect-ratio: 1/1) {
+  nav, .navbar {
+    padding: 10px 16px;
+  }
 
-    .logo,
-    img, 
-    video, 
-    nav, 
-    .footer, 
-    .sidebar,
-    .logo, 
-    .article-container::before {
-        filter: invert(1) hue-rotate(180deg);
-    }
-    .code {
-      color: #90ee90;
-    }
+  .card img, .project-thumb {
+    aspect-ratio: 16 / 10;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Theme Switch */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bs-body-bg: #f6f8fa;
+    --bs-body-color: #1f2328;
+    --card-bg: #ffffff;
+    --border-color: #d0d7de;
+    --muted-text: #656d76;
+  }
+  .logo {
+    filter: none;
+  }
+  main a:not(.project-btn), section a:not(.project-btn) {
+    color: #1a7f37;
+  }
+
+  main a:not(.project-btn):hover, section a:not(.project-btn):hover {
+    color: #116329;
+  }
+  code {
+    background-color: #eff2f5;
+    color: #0550ae;
+  }
 }
