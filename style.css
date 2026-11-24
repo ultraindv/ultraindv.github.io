@@ -44,13 +44,13 @@ main, section {
   padding: 24px 20px;
 }
 
-main a:not(.project-btn), section a:not(.project-btn) {
+main a:not(.project-btn, .btn-action), section a:not(.project-btn, .btn-action) {
   color: #90EE90;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-main a:not(.project-btn):hover, section a:not(.project-btn):hover {
+main a:not(.project-btn, .btn-action):hover, section a:not(.project-btn, .btn-action):hover {
   color: #b8f7b8;
 }
 
@@ -113,6 +113,17 @@ main button, section button, .btn-primary, .project-btn {
 main button:hover, section button:hover, .btn-primary:hover, .project-btn:hover {
   background-color: #2ea043;
   border-color: #2ea043;
+}
+
+a.btn-action {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a.btn-action:hover, a.btn-action:focus {
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-1px);
 }
 
 /* Code */
