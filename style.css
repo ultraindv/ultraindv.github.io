@@ -159,7 +159,7 @@ footer {
   height: 36px;
   margin: 0 6px;
   font-size: 2rem; /* Replaces font-size: 0 so icons appear */
-  color: var(--bs-body-color); /* Automatically adapts to dark/light mode */
+  color: #f0f6fc; /* Automatically adapts to dark/light mode */
   text-decoration: none;
   transition: transform 0.15s ease, color 0.15s ease;
 }
