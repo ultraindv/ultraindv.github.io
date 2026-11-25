@@ -152,29 +152,32 @@ footer {
 /* Social Icons (all rights go to the original owners) */
 
 .social-icons a {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    margin: 0 6px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    font-size: 0;
-    transition: transform 0.15s ease, opacity 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin: 0 6px;
+  font-size: 2rem; /* Replaces font-size: 0 so icons appear */
+  color: var(--bs-body-color); /* Automatically adapts to dark/light mode */
+  text-decoration: none;
+  transition: transform 0.15s ease, color 0.15s ease;
 }
 
-.social-icons a:hover {
+.social-icons a:not(.twitter, .youtube):hover {
+  transform: translateY(-2px);
+  color: var(--accent-green);
+}
+
+.social-icons a.twitter:hover {
     transform: translateY(-2px);
-    opacity: 0.85;
+    color: #1DA1F2;
 }
 
-.twitter {
-    background-image: url("https://nosstos.github.io/images/social icons/X_logo.png");
-}
+.social-icons a.youtube:hover{
+    transform: translateY(-2px);
+    color: #FF0033;
 
-.github {
-    background-image: url("https://nosstos.github.io/images/social icons/github.png");
-    filter: invert(1);
 }
 
 /* 7. Mobile / Portrait Aspect Ratio Adjustments */
