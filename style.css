@@ -164,9 +164,9 @@ footer {
   transition: transform 0.15s ease, color 0.15s ease;
 }
 
-.social-icons a:not(.twitter, .youtube):hover {
+.social-icons a.github:hover {
   transform: translateY(-2px);
-  color: var(--accent-green);
+  color: #6E40C9;
 }
 
 .social-icons a.twitter:hover {
